@@ -19,9 +19,7 @@ jobs:
         java-version: '17'
 
     - name: Build with Maven
-      run: ./mvnw clean install
-      
+      run: mvn clean install
 
     - name: Run Tests
-      run: ./mvnw test
-     
+      run: mvn test
