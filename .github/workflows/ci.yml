@@ -36,3 +36,13 @@ jobs:
         name: app-jar
         path: devops-app/target/*.jar
         retention-days: 5
+
+  docker:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Login to Docker Hub
+      uses: docker/login-action@v3
