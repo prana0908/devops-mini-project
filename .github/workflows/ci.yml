@@ -2,7 +2,7 @@ name: CI/CD Pipeline
 
 on:
   push:
-    branches: [ "main", "dev", "feature/*" ]
+    branches: [ "main", "dev", "feature/devops-setup","feature/*" ]
 
 permissions:
   contents: read
@@ -42,6 +42,18 @@ jobs:
       with:
         distribution: 'temurin'
         java-version: '17'
+
+
+    - name: Cache Maven dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.m2
+        key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+        restore-keys: |
+          ${{ runner.os }}-m2    
+          
+          
+          
     - name: Run Unit Tests
       run: mvn -Dtest=!SeleniumTest test
     - name: Package JAR
