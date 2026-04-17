@@ -30,7 +30,7 @@ class DevopsdemoApplicationTests {
                .contentType(MediaType.APPLICATION_JSON)
                .content("\"Buy groceries\""))
                .andExpect(status().isOk())
-               .andExpect(content().string("Task added"));
+               .andExpect(content().string("Task added successfully")); // line 33
     }
 
     @Test
