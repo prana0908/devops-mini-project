@@ -1,68 +1,84 @@
-# devops-mini-project
+# 🚀 CC_Mini_Project – Task Manager
 
-- **Feature branches** → Only Build + Test runs
-- **Main branch** → Full pipeline including Docker + Deploy
+## 📌 Project Overview
+
+This is a **Spring Boot-based Task Manager application** demonstrating **Docker containerization and cloud deployment**.
 
 ---
 
-## 📦 Run with Docker (Easiest)
+## 👥 Contributors
 
-No Java or Maven needed — just Docker!
-```bash
-docker pull manvhipipriya/devops-app:latest
-docker run -p 8080:8080 manvhipipriya/devops-app:latest
+* Pranali Nikose
+* Iqra Shaikh
+* Sanika Pawar
+
+---
+
+## 🛠️ Technologies Used
+
+* Java (Spring Boot)
+* Docker
+* Docker Hub
+* GitHub
+* Render
+
+---
+
+## 🐳 Docker Image
+
+https://hub.docker.com/r/pranalinikose/task-manager
+
+---
+
+## ▶️ Run with Docker
+
+```bash id="9t2d6x"
+docker pull pranalinikose/task-manager
+docker run -p 8080:8080 pranalinikose/task-manager
 ```
 
-Open browser: [http://localhost:8080](http://localhost:8080)
+Open:
+http://localhost:8080
 
 ---
 
-## 💻 Run Locally from Source
-```bash
-git clone https://github.com/manvhi/devops-mini-project.git
+## ☁️ Live Deployment
+
+https://cc-mini-project-zie3.onrender.com
+
+---
+
+## 💻 Run Locally
+
+```bash id="1m4j2q"
+git clone https://github.com/prana0908/devops-mini-project.git
 cd devops-mini-project/devops-app
 ./mvnw spring-boot:run
-```
-
-Open browser: [http://localhost:8080](http://localhost:8080)
-
----
-
-## 🧪 Run Tests
-```bash
-# Run JUnit API tests
-./mvnw test -Dtest=DevopsdemoApplicationTests
-
-# Run Selenium UI tests (requires app running on port 8080)
-./mvnw test -Dtest=SeleniumTest
 ```
 
 ---
 
 ## 🔌 API Endpoints
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | /tasks | Get all tasks |
-| POST | /tasks | Add a new task |
-| DELETE | /tasks/{index} | Delete task by index |
+| Method | Endpoint       | Description    |
+| ------ | -------------- | -------------- |
+| GET    | /tasks         | Get all tasks  |
+| POST   | /tasks         | Add a new task |
+| DELETE | /tasks/{index} | Delete task    |
 
 ---
 
-## 🐳 Docker Hub
+## 🐳 Dockerfile
 
-Image available at:
-👉 [https://hub.docker.com/r/manvhipipriya/devops-app](https://hub.docker.com/r/manvhipipriya/devops-app)
+* Multi-stage build
+* Maven build stage
+* Java runtime stage
 
 ---
 
-## 👩‍💻 Author
+## 🎯 Features
 
-**Manvhi Pipriya**
-- GitHub: [@manvhi](https://github.com/manvhi)
-
-## 👩‍💻 Contributor
-
-Pranali Nikose
-Iqra Shaikh
-Apurva Garadkar
+* Add and delete tasks
+* Simple UI
+* Containerized application
+* Cloud deployed
